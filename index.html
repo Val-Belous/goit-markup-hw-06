@@ -99,12 +99,27 @@
                   placeholder="Введите текст"
                 ></textarea>
               </label>
-              <label class="modal-label-checkbox">
-                <span class="custom"></span>
-                <input type="checkbox" name="agreement" />
-                Соглашаюсь с рассылкой и принимаю
-                <span><a class="checkbox-agreement" href="">Условия договора</a> </span>
+
+              <label class="agreement">
+                <input
+                  class="agreement-checkbox visually-hidden"
+                  type="checkbox"
+                  name="agreement"
+                  checked
+                  aria-hidden="true"
+                  tabindex="-1"
+                />
+                <span class="check-box" role="checkbox" tabindex="0">
+                  <svg class="checkboks-icon" width="16" height="15">
+                    <use href="./images/icons.svg#icon-vector"></use>
+                  </svg>
+                </span>
+                <span
+                  >Соглашаюсь с рассылкой и принимаю
+                  <a class="checkbox-agreement" href="">Условия договора</a>
+                </span>
               </label>
+              <button class="send-btn" type="button">Отправить</button>
             </form>
           </div>
         </div>

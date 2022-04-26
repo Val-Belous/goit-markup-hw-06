@@ -878,6 +878,15 @@ img {
   border-radius: 50%;
 }
 
+.modal-close-icon {
+  transition: fill var(--animation);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--accent-color);
+}
+
 .modal-label {
   display: flex;
   flex-direction: column;
@@ -904,6 +913,18 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   padding: 12px 42px;
+
+  transition: border-color var(--animation);
+}
+
+.modal-label-input:hover,
+.modal-label-input:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-label-input:hover + .modal-label-icon,
+.modal-label-input:focus + .modal-label-icon {
+  fill: var(--accent-color);
 }
 
 .modal-label-comment {
@@ -923,6 +944,12 @@ img {
   margin-bottom: 20px;
 
   resize: none;
+  transition: border-color var(--animation);
+}
+
+.modal-label-comment:hover,
+.modal-label-comment:focus {
+  border-color: var(--accent-color);
 }
 
 .modal-label-icon {
@@ -930,28 +957,76 @@ img {
   bottom: 30%;
   left: 15px;
 
-  fill: var(--primary-text-color);
+  transition: fill var(--animation);
 }
 
-.modal-label-checkbox {
+.agreement {
   display: flex;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 
+  margin-left: 36px;
   margin-bottom: 30px;
 }
 
-.custom {
+.agreement-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.check-box {
+  margin-left: -24px;
+  margin-top: 4px;
+  margin-right: 7px;
   width: 16px;
-  height: 16px;
+  height: 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   border: 2px solid var(--primary-text-color);
-  border-radius: 1px;
+  border-radius: 2px;
+  fill: transparent;
 }
 
 .checkbox-agreement {
   color: var(--accent-color);
   text-decoration: underline;
+}
+
+.agreement-checkbox:checked + .check-box {
+  background-color: var(--accent-color);
+  fill: var(--second-color);
+  border: 0;
+}
+
+.send-btn {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--second-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  border: 0;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  transition: background-color var(--animation);
+}
+
+.send-btn:hover,
+.send-btn:focus {
+  background-color: #188ce8;
 }
 /* ------------------------- END modal ------------------------- */
