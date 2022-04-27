@@ -1002,7 +1002,7 @@ img {
 }
 
 .check-box:focus {
-  outline: 2px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 
 .checkbox-agreement {
