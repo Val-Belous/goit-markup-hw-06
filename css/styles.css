@@ -876,6 +876,8 @@ img {
   background-color: var(--second-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  outline: transparent;
 }
 
 .modal-close-icon {
@@ -915,6 +917,8 @@ img {
   padding: 12px 42px;
 
   transition: border-color var(--animation);
+
+  outline: transparent;
 }
 
 .modal-label-input:hover,
@@ -945,6 +949,7 @@ img {
 
   resize: none;
   transition: border-color var(--animation);
+  outline: transparent;
 }
 
 .modal-label-comment:hover,
@@ -994,6 +999,10 @@ img {
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
   fill: transparent;
+}
+
+.check-box:focus {
+  outline: 2px solid var(--accent-color);
 }
 
 .checkbox-agreement {
